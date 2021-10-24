@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<FlowPane prefHeight="800.0" prefWidth="1500.0" xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="sample.EnforcePoliciesController">
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SelectedItems: " />
+    <ListView fx:id="selectedView" prefHeight="300.0" prefWidth="400.0" />
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ActualResult: " />
+    <ListView fx:id="actualView" prefHeight="300.0" prefWidth="400.0" />
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ExpectedResult: " />
+    <ListView fx:id="expectedView" prefHeight="300.0" prefWidth="400.0" />
+    <HBox alignment="CENTER" prefHeight="150.0" prefWidth="450.0">
+        <Button fx:id="Enforce" mnemonicParsing="false" onAction="#enforcePolicies" prefHeight="24.0" prefWidth="120.0" text="Enforce"  />
+        <Button fx:id="Rollback" mnemonicParsing="false" onAction="#rollbackPolicies" prefHeight="24.0" prefWidth="120.0" text="Rollback"  />
+        <Button fx:id="Download" mnemonicParsing="false" onAction="#downloadPolicies" prefHeight="10.0" prefWidth="10.0" />
+    </HBox>
+</FlowPane>
