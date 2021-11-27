@@ -20,7 +20,7 @@ gender, email etc.).
 
 
 ### Instructions:
-1. Install the following libraries: 
+**1. Install the following libraries:**
 - flask
 - requests_oauthlib
 - python-dotenv
