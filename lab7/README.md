@@ -16,9 +16,7 @@
 - pymongo
 - pycryptodome
 
-**2. Create an .env file which contains the following information:**
-
-**3. Run:**
+**2. Run:**
 
 ```
 python app.py
