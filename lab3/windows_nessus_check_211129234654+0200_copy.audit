@@ -1,0 +1,11 @@
+<Custom item>
+ value_type : SERVICE_SET
+  value_data : "Automatic"
+  reg_option : MUST_EXIST
+  svc_option : CAN_NOT_BE_NULL
+  key_item : "NESSUS_DIR"
+  service_name : "Tenable Nessus"
+ type : SERVICE_POLICY
+  description : "The Windows Nessus service is set to run at boot."
+</Custom item>
+

@@ -1,0 +1,14 @@
+<Custom item>
+ value_type : POLICY_TEXT
+  value_data : "C:\ProgramData\Tenable\Nessus\nessus\plugins\plugin_feed_info.inc"
+  reg_option : MUST_EXIST
+  svc_option : CAN_NOT_BE_NULL
+  info : "This is used to determine if a Nessus scanner is using the Professional Feed or a Home Feed."
+  key_item : "NESSUS_DIR"
+  regex : "ProfessionalFeed"
+  service_name : "Tenable Nessus"
+ type : FILE_CONTENT_CHECK
+  expect : "ProfessionalFeed"
+  description : "Nessus Professional Feed check."
+</Custom item>
+

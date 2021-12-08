@@ -1,3 +1,4 @@
+package sample;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
@@ -27,7 +28,6 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-
 import static java.util.regex.Pattern.DOTALL;
 
 public class ViewController implements Initializable {
@@ -39,9 +39,9 @@ public class ViewController implements Initializable {
     ArrayList<Integer> indexesArray = new ArrayList<>();
     JSONArray finalAudit = new JSONArray();
     JSONArray selectedPolicies = new JSONArray();
-
     String textFuture = "";
     ObservableList<String> observableList = FXCollections.observableArrayList();
+
     @FXML
     private TextField textListViewField;
     private ExecutorService executorService = Executors.newSingleThreadExecutor();
@@ -79,8 +79,6 @@ public class ViewController implements Initializable {
 
         langsSelectionModel.getSelectedIndices().addListener((ListChangeListener<? super Number>) (observableValue) -> {
             selectedIndices = (List<Integer>) observableValue.getList();
-            System.out.println(selectedIndices);
-
         });
 
         filter();
@@ -221,7 +219,7 @@ public class ViewController implements Initializable {
                         String[] actualOutput = cmdOutput.toString().trim().split("  +");
                         Pattern pattern = Pattern.compile(map.get(" value_data ").toString().replaceAll("\"","").trim(), Pattern.DOTALL);
                         Matcher m = pattern.matcher(actualOutput[actualOutput.length - 1]);
-                        if(!selectedPolicies.isEmpty()) {
+                        if(null != selectedPolicies && selectedPolicies.length() != 0) {
                             selectedPolicies.getJSONObject(i).put("actual_data", actualOutput[actualOutput.length - 1]);
                         }
                         if (m.find())
@@ -239,7 +237,6 @@ public class ViewController implements Initializable {
 
     @FXML
     public void changePolicies(ActionEvent event) throws IOException {
-
         Parent root = FXMLLoader.load(getClass().getResource("EnforcePolicies.fxml"));
         FXMLLoader loader = new FXMLLoader(getClass().getResource("EnforcePolicies.fxml"));
         EnforcePoliciesController controller = new EnforcePoliciesController();
@@ -271,7 +268,6 @@ public class ViewController implements Initializable {
                 scannedItems.put(selectedItem);
             });
         }
-        System.out.println(selectedScannedItems);
         EnforcePoliciesController.observableListActual = FXCollections.observableArrayList(actualList);
         EnforcePoliciesController.observableListExpected = FXCollections.observableArrayList(expectedList);
         EnforcePoliciesController.selectedPolicies = scannedItems;

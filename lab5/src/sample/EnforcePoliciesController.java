@@ -104,8 +104,9 @@ public class EnforcePoliciesController implements Initializable {
         for (int i = 0; i < selectedPolicies.length(); i++) {
             map = selectedPolicies.getJSONObject(i).toMap();
             if (map.get(" reg_key ") != null && map.get(" reg_item ") != null) {
+                String command = "reg add" + map.get(" reg_key ").toString() + " /v " + map.get(" reg_item ").toString() + " /d " + map.get(" value_data ") + " /f ";
                 ProcessBuilder builder = new ProcessBuilder(
-                        "cmd.exe", "/c", "reg add" + map.get(" reg_key ").toString() + " /v " + map.get(" reg_item ").toString() + " /d " + map.get(" value_data ") + " /f ");
+                        "cmd.exe", "/c", command);
                 builder.redirectErrorStream(true);
                 Process p = builder.start();
                 BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));

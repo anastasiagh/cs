@@ -1,0 +1,126 @@
+<Custom item>
+ value_type : POLICY_TEXT
+  value_data : "HKLM\SOFTWARE\Tenable\Nessus"
+  reg_option : MUST_EXIST
+  key_item : "NESSUS_DIR"
+ type : REG_CHECK
+  description : "Windows Nessus is installed"
+</Custom item>
+
+<Custom item>
+ value_type : SERVICE_SET
+  value_data : "Automatic"
+  reg_option : MUST_EXIST
+  svc_option : CAN_NOT_BE_NULL
+  key_item : "NESSUS_DIR"
+  service_name : "Tenable Nessus"
+ type : SERVICE_POLICY
+  description : "The Windows Nessus service is set to run at boot."
+</Custom item>
+
+<Custom item>
+ value_type : POLICY_TEXT
+  value_data : "HKLM\SOFTWARE\Tenable\Nessus"
+  reg_option : MUST_EXIST
+  svc_option : CAN_NOT_BE_NULL
+  key_item : "NESSUS_DIR"
+  service_name : "Tenable Nessus"
+ type : REG_CHECK
+  description : "Windows Nessus is installed"
+</Custom item>
+
+<Custom item>
+ value_type : SERVICE_SET
+  value_data : "Manual" || "Disabled"
+  reg_option : MUST_EXIST
+  svc_option : CAN_NOT_BE_NULL
+  key_item : "NESSUS_DIR"
+  service_name : "Tenable Nessus"
+ type : SERVICE_POLICY
+  description : "Windows Nessus"
+</Custom item>
+
+<Custom item>
+ value_type : POLICY_TEXT
+  value_data : "HKLM\SOFTWARE\Tenable\Nessus"
+  reg_option : MUST_EXIST
+  key_item : "NESSUS_DIR"
+ type : REG_CHECK
+  description : "Windows Nessus is installed"
+</Custom item>
+
+<Custom item>
+ value_type : SERVICE_SET
+  value_data : "Automatic"
+  reg_option : MUST_EXIST
+  svc_option : CAN_NOT_BE_NULL
+  key_item : "NESSUS_DIR"
+  service_name : "Tenable Nessus"
+ type : SERVICE_POLICY
+  description : "The Windows Nessus service is set to run at boot."
+</Custom item>
+
+<Custom item>
+ value_type : POLICY_TEXT
+  value_data : "HKLM\SOFTWARE\Tenable\Nessus"
+  reg_option : MUST_EXIST
+  svc_option : CAN_NOT_BE_NULL
+  key_item : "NESSUS_DIR"
+  service_name : "Tenable Nessus"
+ type : REG_CHECK
+  description : "Windows Nessus is installed"
+</Custom item>
+
+<Custom item>
+ value_type : SERVICE_SET
+  value_data : "Manual" || "Disabled"
+  reg_option : MUST_EXIST
+  svc_option : CAN_NOT_BE_NULL
+  key_item : "NESSUS_DIR"
+  service_name : "Tenable Nessus"
+ type : SERVICE_POLICY
+  description : "Windows Nessus"
+</Custom item>
+
+<Custom item>
+ value_type : POLICY_TEXT
+  value_data : "HKLM\SOFTWARE\Tenable\Nessus"
+  reg_option : MUST_EXIST
+  key_item : "NESSUS_DIR"
+ type : REG_CHECK
+  description : "Windows Nessus is installed"
+</Custom item>
+
+<Custom item>
+ value_type : SERVICE_SET
+  value_data : "Automatic"
+  reg_option : MUST_EXIST
+  svc_option : CAN_NOT_BE_NULL
+  key_item : "NESSUS_DIR"
+  service_name : "Tenable Nessus"
+ type : SERVICE_POLICY
+  description : "The Windows Nessus service is set to run at boot."
+</Custom item>
+
+<Custom item>
+ value_type : POLICY_TEXT
+  value_data : "HKLM\SOFTWARE\Tenable\Nessus"
+  reg_option : MUST_EXIST
+  svc_option : CAN_NOT_BE_NULL
+  key_item : "NESSUS_DIR"
+  service_name : "Tenable Nessus"
+ type : REG_CHECK
+  description : "Windows Nessus is installed"
+</Custom item>
+
+<Custom item>
+ value_type : SERVICE_SET
+  value_data : "Manual" || "Disabled"
+  reg_option : MUST_EXIST
+  svc_option : CAN_NOT_BE_NULL
+  key_item : "NESSUS_DIR"
+  service_name : "Tenable Nessus"
+ type : SERVICE_POLICY
+  description : "Windows Nessus"
+</Custom item>
+

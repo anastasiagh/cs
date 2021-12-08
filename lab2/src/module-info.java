@@ -4,6 +4,7 @@ module lab1 {
     requires java.desktop;
     requires java.logging;
     requires json;
+    requires javafx.graphics;
 
     opens sample;
 }

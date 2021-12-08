@@ -26,8 +26,8 @@ import java.util.stream.Collectors;
 
 import static java.util.regex.Pattern.DOTALL;
 
-public class ViewController implements Initializable {
-    private static final Logger LOG = Logger.getLogger(ViewController.class.getName());
+public class viewController implements Initializable {
+    private static final Logger LOG = Logger.getLogger(viewController.class.getName());
     @FXML
     private static JSONArray jsonArr;
     @FXML

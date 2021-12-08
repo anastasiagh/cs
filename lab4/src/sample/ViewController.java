@@ -219,7 +219,7 @@ public class ViewController implements Initializable {
                         String[] actualOutput = cmdOutput.toString().trim().split("  +");
                         Pattern pattern = Pattern.compile(map.get(" value_data ").toString().replaceAll("\"","").trim(), DOTALL);
                         Matcher m = pattern.matcher(actualOutput[actualOutput.length - 1]);
-                        if(!selectedPolicies.isEmpty()) {
+                        if(null != selectedPolicies && selectedPolicies.length() != 0) {
                             selectedPolicies.getJSONObject(i).put("actual_data", actualOutput[actualOutput.length - 1]);
                         }
                         if (m.find())
