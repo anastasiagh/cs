@@ -20,9 +20,9 @@
 user=your_username
 password=your_password
 ```
-**3. Write the path to this file in app.java:**
+**2. Write the path to this file in app.java:**
 ```
 58. FileReader reader=new FileReader("properties_path_here");
 ```
-**2. Run app.java**
+**3. Run app.java**
 
